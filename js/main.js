@@ -25,3 +25,56 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 
 sections.forEach(s => observer.observe(s));
+
+// Scroll reveal
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+// Contact form → Google Apps Script
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxJPYk97P7Qa3NpeG1c_k_uHoaVXQ-a4-eDKlwbivBp9zZXlfgWb8I7_Wyk2RlgD6he2w/exec';
+
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formStatus = document.getElementById('form-status');
+
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    formStatus.className = 'form-status';
+    formStatus.textContent = '';
+
+    const payload = {
+        name: contactForm.name.value.trim(),
+        email: contactForm.email.value.trim(),
+        message: contactForm.message.value.trim(),
+    };
+
+    try {
+        await fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+        });
+
+        formStatus.className = 'form-status form-status--ok';
+        formStatus.textContent = '// Message sent. I\'ll get back to you soon.';
+        contactForm.reset();
+    } catch {
+        formStatus.className = 'form-status form-status--err';
+        formStatus.textContent = '// Failed to send. Try emailing me directly.';
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'SendMessage()';
+    }
+});
