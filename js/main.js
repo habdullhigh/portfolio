@@ -39,7 +39,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
 
 // Contact form → Google Apps Script
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxJPYk97P7Qa3NpeG1c_k_uHoaVXQ-a4-eDKlwbivBp9zZXlfgWb8I7_Wyk2RlgD6he2w/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzVoBWQfOSlTjJiTdL2Iv0TaQRJwYkdszkZ-YA_TEcBvzO7uXGZoWV7EMmP0yZl6F7bjA/exec';
 
 const contactForm = document.getElementById('contact-form');
 const submitBtn = document.getElementById('submit-btn');
