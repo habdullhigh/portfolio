@@ -53,18 +53,16 @@ contactForm.addEventListener('submit', async (e) => {
     formStatus.className = 'form-status';
     formStatus.textContent = '';
 
-    const payload = {
-        name: contactForm.name.value.trim(),
-        email: contactForm.email.value.trim(),
-        message: contactForm.message.value.trim(),
-    };
+    const formData = new URLSearchParams();
+    formData.append('name', contactForm.name.value.trim());
+    formData.append('email', contactForm.email.value.trim());
+    formData.append('message', contactForm.message.value.trim());
 
     try {
         await fetch(SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
+            body: formData,
         });
 
         formStatus.className = 'form-status form-status--ok';
