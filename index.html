@@ -7,13 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- NAV -->
     <nav class="nav">
-        <span class="nav-logo">ao<span class="accent">.</span></span>
+        <a href="#hero" class="nav-logo">ao<span class="accent">.</span></a>
         <div class="nav-links">
             <a href="#projects">Projects</a>
             <a href="#impact">Impact</a>
@@ -34,12 +35,14 @@
             <p class="hero-role">Backend Engineer</p>
             <p class="prompt">$ skills</p>
             <div class="skill-tags">
-                <span class="tag">Node.js</span>
                 <span class="tag">Laravel</span>
-                <span class="tag">Express.js</span>
-                <span class="tag">Nest.js</span>
                 <span class="tag">PHP</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Nest.js</span>
                 <span class="tag">TypeScript</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Python</span>
+                <span class="tag">MySQL</span>
                 <span class="tag">PostgreSQL</span>
                 <span class="tag">MongoDB</span>
                 <span class="tag">Docker</span>
@@ -47,26 +50,41 @@
         </div>
     </section>
 
+    <!-- SPOTLIGHT -->
+    <section class="section spotlight-section">
+        <div class="container container--sm">
+            <h2 class="section-title" data-reveal="fade-up">Talent Spotlighting and Recognition</h2>
+            <div class="spotlight-card" data-reveal="fade-up">
+                <div class="spotlight-left">
+                    <img src="https://tredi-bucket.lon1.cdn.digitaloceanspaces.com/uploads/54f87817-2c8d-46ca-983f-f5f9af430d57_20260314_011541.webp" alt="Abdullah Oyetoro — StudentPaddy Spotlight" class="spotlight-og">
+                </div>
+                <div class="spotlight-right">
+                    <!-- <img src="https://unispendtracker.com/img/studentpaddy-text.svg" alt="StudentPaddy" class="spotlight-logo"> -->
+                    <span class="spotlight-badge">🏆 Featured Talent</span>
+                    <h3 class="spotlight-title">Spotlighted by StudentPaddy</h3>
+                    <p class="spotlight-desc">Recognized as a featured engineering talent by StudentPaddy — a platform empowering universities, employers, students, and alumni with innovative talent management solutions.</p>
+                    <a href="https://studentpaddy.com" target="_blank" class="spotlight-link">View Spotlight ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PROJECTS -->
     <section class="section" id="projects">
         <div class="container">
-            <h2 class="section-title">System Architecture & Projects</h2>
+            <h2 class="section-title" data-reveal="fade-up">System Architecture & Projects</h2>
             <div class="projects-grid">
 
-                <!-- Project 1 -->
-                <div class="project-card">
+                <!-- TrediBooks -->
+                <div class="project-card" data-reveal="fade-up" data-delay="1">
                     <div class="project-image">
-                        <div class="ph">
-                            <div class="ph-inner">
-                                <p class="ph-text">Add image →<br>assets/images/projects/tredi.jpg</p>
-                            </div>
-                        </div>
-                        <!-- Replace src once you add your image -->
-                        <img src="assets/images/projects/tredi.jpg" alt="Distributed Job Scheduling System" onerror="this.style.display='none'">
+                        <img src="https://tredibooks.com/img/thumbnail.png" alt="TrediBooks">
+                        <a href="https://tredibooks.com" target="_blank" class="project-live-badge">Live ↗</a>
                     </div>
                     <div class="project-content">
-                        <h3>Distributed Job Scheduling System</h3>
-                        <p class="project-desc">Engineered a lazy-trigger scheduler at Tredi, dispatching background jobs to update millions of records on-demand without cron overhead.</p>
+                        <h3>TrediBooks</h3>
+                        <p class="project-role">Lead Backend Engineer</p>
+                        <p class="project-desc">Manage stock, sales, expenses, customers, and reps across multiple shops — all in one simple platform. Responsible for 80% of the complete backend development.</p>
                         <p class="achievements-label">Key Achievements:</p>
                         <ul>
                             <li>Lazy-trigger scheduler with cache locks reducing DevOps costs by 70%</li>
@@ -84,48 +102,67 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
+                <!-- SafeBridge -->
+                <div class="project-card" data-reveal="fade-up" data-delay="2">
                     <div class="project-image">
-                        <div class="ph">
-                            <div class="ph-inner">
-                                <p class="ph-text">Add image →<br>assets/images/projects/safebridge.jpg</p>
-                            </div>
-                        </div>
-                        <!-- Replace src once you add your image -->
-                        <img src="assets/images/projects/safebridge.jpg" alt="Multi-Gateway Payment Platform" onerror="this.style.display='none'">
+                        <img src="https://safebridge.africa/safebridge.png" alt="SafeBridge Africa">
+                        <a href="https://safebridge.africa" target="_blank" class="project-live-badge">Live ↗</a>
                     </div>
                     <div class="project-content">
-                        <h3>Multi-Gateway Payment Platform</h3>
-                        <p class="project-desc">Pioneered a plug-in payment system at SAFEBRIDGE enabling seamless integration of multiple payment gateways behind a clean internal API boundary.</p>
+                        <h3>SafeBridge Africa</h3>
+                        <p class="project-role">Full Stack Developer (Backend Heavy)</p>
+                        <p class="project-desc">Secure escrow services ensuring trusted transactions for online vendors and shoppers. Delivered 90% of the backend and 30% of the frontend.</p>
                         <p class="achievements-label">Key Achievements:</p>
                         <ul>
-                            <li>Plug-in architecture reducing new gateway integration time by 90%</li>
+                            <li>Plug-in payment gateway architecture reducing integration time by 90%</li>
                             <li>Internal wallet API boundary cutting development time by 50%</li>
-                            <li>Dual Email/OTP auth flow eliminating SMS costs, reducing transaction time by 15s</li>
-                            <li>Payments backend serving 10,000+ students and staff at ODJTECH</li>
+                            <li>Dual Email/OTP auth flow reducing average transaction time by 15s</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tag">Laravel</span>
                             <span class="tag">PHP</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">REST API</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">React</span>
                             <span class="tag">PHPUnit</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 — GitHub repo placeholder -->
-                <div class="project-card project-coming-soon">
+                <!-- UniSpendTracker -->
+                <div class="project-card" data-reveal="fade-up" data-delay="3">
+                    <div class="project-image">
+                        <img src="https://unispendtracker.com/img/thumb.png" alt="UniSpendTracker">
+                        <a href="https://unispendtracker.com" target="_blank" class="project-live-badge">Live ↗</a>
+                    </div>
+                    <div class="project-content">
+                        <h3>UniSpendTracker</h3>
+                        <p class="project-role">Backend Developer</p>
+                        <p class="project-desc">A P2P QR code payment system built for campuses, empowering students, vendors, and universities with seamless campus transactions.</p>
+                        <p class="achievements-label">Key Achievements:</p>
+                        <ul>
+                            <li>Payments backend serving 10,000+ students and staff</li>
+                            <!-- <li>JWT migration reducing authentication overhead by 60%</li> -->
+                            <li>Webhook concurrency via Strategy pattern achieving 90% uptime</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">PHP</span>
+                            <!-- <span class="tag">JWT</span> -->
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Webhooks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coming soon -->
+                <!-- <div class="project-card project-coming-soon" data-reveal="fade-up" data-delay="4">
                     <div class="coming-soon-content">
                         <svg class="cs-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                         <h3>Open Source Project</h3>
                         <p class="project-desc">Something new is in the works. Check back soon.</p>
-                        <a href="https://github.com/habdullhigh" target="_blank" class="github-link">
-                            @habdullhigh
-                        </a>
+                        <a href="https://github.com/habdullhigh" target="_blank" class="github-link">@habdullhigh</a>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -134,12 +171,12 @@
     <!-- IMPACT -->
     <section class="section" id="impact">
         <div class="container">
-            <h2 class="section-title">Impact & Achievements</h2>
+            <h2 class="section-title" data-reveal="fade-up">Impact & Achievements</h2>
 
-            <div class="impact-group">
+            <div class="impact-group" data-reveal="fade-up">
                 <h3 class="impact-category">System Performance</h3>
                 <div class="impact-grid">
-                    <div class="impact-card">
+                    <div class="impact-card" data-reveal="fade-up" data-delay="1">
                         <h4>Job Scheduler</h4>
                         <ul>
                             <li>DevOps costs reduced by 70%</li>
@@ -147,7 +184,7 @@
                             <li>Millions of records updated on-demand</li>
                         </ul>
                     </div>
-                    <div class="impact-card">
+                    <div class="impact-card" data-reveal="fade-up" data-delay="2">
                         <h4>Auth & API Optimization</h4>
                         <ul>
                             <li>Authentication overhead reduced by 60%</li>
@@ -158,10 +195,10 @@
                 </div>
             </div>
 
-            <div class="impact-group">
+            <div class="impact-group" data-reveal="fade-up">
                 <h3 class="impact-category">Infrastructure & Cost</h3>
                 <div class="impact-grid">
-                    <div class="impact-card">
+                    <div class="impact-card" data-reveal="fade-up" data-delay="1">
                         <h4>Storage Migration</h4>
                         <ul>
                             <li>Infrastructure costs cut by 80%</li>
@@ -169,7 +206,7 @@
                             <li>Cloudinary → DigitalOcean Spaces</li>
                         </ul>
                     </div>
-                    <div class="impact-card">
+                    <div class="impact-card" data-reveal="fade-up" data-delay="2">
                         <h4>Payment Systems</h4>
                         <ul>
                             <li>Gateway integration time reduced 90%</li>
@@ -180,10 +217,10 @@
                 </div>
             </div>
 
-            <div class="impact-group">
+            <div class="impact-group" data-reveal="fade-up">
                 <h3 class="impact-category">Development Efficiency</h3>
                 <div class="impact-grid">
-                    <div class="impact-card">
+                    <div class="impact-card" data-reveal="fade-up" data-delay="1">
                         <h4>API Design</h4>
                         <ul>
                             <li>Endpoint development time cut by 60%</li>
@@ -191,7 +228,7 @@
                             <li>Clean internal API boundaries</li>
                         </ul>
                     </div>
-                    <div class="impact-card">
+                    <div class="impact-card" data-reveal="fade-up" data-delay="2">
                         <h4>System Reliability</h4>
                         <ul>
                             <li>90% webhook uptime via Strategy pattern</li>
@@ -207,7 +244,7 @@
     <!-- CONTACT -->
     <section class="section" id="contact">
         <div class="container container--sm">
-            <div class="terminal-card contact-card">
+            <div class="terminal-card contact-card" data-reveal="scale">
                 <div class="terminal-dots">
                     <span class="dot dot-red"></span>
                     <span class="dot dot-yellow"></span>
@@ -224,8 +261,7 @@
                 <a href="mailto:oyehabdullhigh@gmail.com" class="contact-btn email-btn">oyehabdullhigh@gmail.com</a>
 
                 <p class="prompt">$ cat resume.pdf</p>
-                <!-- Update href to your actual resume file path -->
-                <a href="assets/Abdullah_Oyetoro_resume.pdf" download class="contact-btn resume-btn">📄 Download Resume</a>
+                <a href="https://drive.google.com/file/d/1HPBadBYOXnDFOctD_ODB4QNlUvpwINJe/view" target="_blank" rel="noopener noreferrer" class="contact-btn resume-btn">📄 View Resume</a>
 
                 <p class="prompt">$ ls ./social-links</p>
                 <div class="social-grid">
@@ -243,23 +279,31 @@
                             <span class="social-handle">Abdullah Oyetoro</span>
                         </div>
                     </a>
+                    <a href="https://x.com/habdullhigh" target="_blank" class="social-card">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <div>
+                            <span class="social-name">X (Twitter)</span>
+                            <span class="social-handle">@habdullhigh</span>
+                        </div>
+                    </a>
                 </div>
 
                 <p class="prompt">$ send-message</p>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form">
                     <div class="form-group">
                         <label class="form-label">$ name:</label>
-                        <input type="text" name="name" autocomplete="name">
+                        <input type="text" name="name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">$ email:</label>
-                        <input type="email" name="email" autocomplete="email">
+                        <input type="email" name="email" autocomplete="email" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">$ message:</label>
-                        <textarea name="message" rows="4"></textarea>
+                        <textarea name="message" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">SendMessage()</button>
+                    <button type="submit" class="submit-btn" id="submit-btn">SendMessage()</button>
+                    <p class="form-status" id="form-status"></p>
                 </form>
             </div>
         </div>

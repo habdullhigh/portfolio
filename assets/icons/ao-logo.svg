@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 24" fill="none">
+  <!--
+    ao. logo — Abdullah Oyetoro
+    Transparent background. "ao" inherits context color via currentColor.
+    Dot "." is always brand green (#4ade80).
+
+    Usage on dark bg:  <img src="ao-logo.svg" style="color:#e2e8f0">
+    Usage on light bg: <img src="ao-logo.svg" style="color:#1a1a1a">
+    Note: color/currentColor only works when inlined as <svg> or via CSS mask.
+    For <img> usage the colors below are baked in. See ao-logo-dark.svg for a light-bg variant.
+  -->
+  <text
+    x="1"
+    y="19"
+    font-family="'JetBrains Mono', 'Courier New', monospace"
+    font-size="20"
+    font-weight="700"
+    letter-spacing="-0.5"
+  >
+    <tspan fill="#e2e8f0">ao</tspan><tspan fill="#4ade80">.</tspan>
+  </text>
+</svg>
