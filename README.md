@@ -1,6 +1,6 @@
 # Abdullah Oyetoro — Portfolio
 
-Personal portfolio website for Abdullah Oyetoro, a Backend Engineer based in Lagos, Nigeria. Built with a terminal/hacker aesthetic to reflect a systems-focused engineering mindset.
+A Personal portfolio website for Abdullah Oyetoro, a Backend Engineer based in Lagos, Nigeria. Built with a terminal/hacker aesthetic to reflect a systems-focused engineering mindset.
 
 ## Tech Stack
 
